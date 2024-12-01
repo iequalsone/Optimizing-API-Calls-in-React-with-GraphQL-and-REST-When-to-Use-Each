@@ -1,50 +1,79 @@
-# React + TypeScript + Vite
+# Optimizing API Calls in React with GraphQL and REST
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Optimizing API Calls in React** repository! This project demonstrates best practices for integrating **GraphQL** and **REST APIs** into React applications. The examples utilize **React Query**, **TypeScript**, and a **Vite-based folder structure** to showcase efficient data fetching and server-state management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Overview
 
-## Expanding the ESLint configuration
+APIs are the backbone of modern web applications. This repository covers how to integrate both **GraphQL** and **REST APIs** into React projects, helping you choose the right approach for your specific use case. Additionally, it highlights how **React Query** can enhance your API integration by abstracting caching, refetching, and error handling.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## ✨ Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### REST API Integration:
+- Example of fetching data from a REST endpoint using `useQuery`.
+- Centralized hooks for clean and reusable code.
+
+### GraphQL API Integration:
+- Efficient GraphQL querying with a reusable custom hook.
+- Focus on query and variable management.
+
+### React Query Integration:
+- Unified state management for server-state data.
+- Optimized caching, error handling, and background refetching.
+
+### TypeScript First:
+- All examples leverage TypeScript for type safety and improved development experience.
+
+---
+
+## 📂 Project Structure
+```
+src/
+├── components/       # React components showcasing API usage
+│   ├── PostsList.tsx  # GraphQL integration example
+│   └── TodoList.tsx   # REST API integration example
+├── hooks/            # Custom hooks for API fetching
+│   ├── useRestApi.ts  # REST API hook with React Query
+│   └── useGraphqlApi.ts # GraphQL API hook with React Query
+├── app/              # Main app entry point
+│   └── main.tsx      # App initialization and routing
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🛠 Usage
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### REST API Example
+The REST API example demonstrates fetching a list of todos:
+
+- **Hook:** `src/hooks/useRestApi.ts`
+- **Component:** `src/components/TodoList.tsx`
+
+### GraphQL API Example
+The GraphQL example showcases fetching posts with custom query variables:
+
+- **Hook:** `src/hooks/useGraphqlApi.ts`
+- **Component:** `src/components/PostsList.tsx`
+
+Navigate through the app to explore each example in action.
+
+---
+
+## 📝 License
+This project is licensed under the MIT License. See the [LICENSE](https://raw.githubusercontent.com/iequalsone/Optimizing-API-Calls-in-React-with-GraphQL-and-REST-When-to-Use-Each/refs/heads/main/LICENSE) file for details.
+
+---
+
+## 💬 Contributing
+Contributions are welcome! If you'd like to add more examples or improve the current ones, feel free to:
+
+1. **Fork the repository.**
+2. **Create a new feature branch.**
+3. **Submit a pull request.**
+
+Thank you for checking out this repository! Dive into the world of efficient API integration and data fetching in React. If you found this helpful, be sure to check out the accompanying LinkedIn article for more insights. **Happy coding! 🚀**
+
+   
